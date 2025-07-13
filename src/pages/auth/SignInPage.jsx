@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import logo from "../../assets/logo.jfif";
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
 const SignInPage = () => {
