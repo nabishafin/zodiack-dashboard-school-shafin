@@ -20,7 +20,8 @@ import EditPrivacyPolicy from "../pages/dashboardpages/privacypolicy/EditPrivacy
 import AboutUs from "../pages/dashboardpages/about/AboutUs";
 import EditAbout from "../pages/dashboardpages/about/EditAbout";
 import AllNotifications from "../pages/dashboardpages/notification/AllNotifications";
-import AllUsers from "../pages/dashboardpages/user/AllUsers";
+import AllTeachers from "@/pages/dashboardpages/teacher/AllTeachers";
+import AllGroups from "@/pages/dashboardpages/Group/AllGroups";
 
 const routes = createBrowserRouter([
   {
@@ -49,8 +50,8 @@ const routes = createBrowserRouter([
     children: [
       { index: true, element: <DashboardOverview /> },
       { path: "notificatons", element: <AllNotifications /> },
-      { path: "users", element: <AllUsers /> },
-
+      { path: "teacher", element: <AllTeachers /> },
+      { path: "groups", element: <AllGroups /> },
       // Settings
       { path: "settings/profile", element: <Profile /> },
       { path: "settings/editpersonal", element: <EditProfile /> },

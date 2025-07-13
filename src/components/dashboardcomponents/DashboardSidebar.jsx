@@ -27,8 +27,13 @@ const sidebarItems = [
     icon: LayoutDashboard,
   },
   {
-    title: "Users",
-    href: "/dashboard/users",
+    title: "All teacher",
+    href: "/dashboard/teacher",
+    icon: Users2,
+  },
+  {
+    title: "All Groups",
+    href: "/dashboard/groups",
     icon: Users2,
   },
   {
