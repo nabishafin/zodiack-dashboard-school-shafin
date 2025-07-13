@@ -22,6 +22,7 @@ import EditAbout from "../pages/dashboardpages/about/EditAbout";
 import AllNotifications from "../pages/dashboardpages/notification/AllNotifications";
 import AllTeachers from "@/pages/dashboardpages/teacher/AllTeachers";
 import AllGroups from "@/pages/dashboardpages/Group/AllGroups";
+import Groupdetails from "@/pages/dashboardpages/Group/Groupdetails";
 
 const routes = createBrowserRouter([
   {
@@ -52,6 +53,8 @@ const routes = createBrowserRouter([
       { path: "notificatons", element: <AllNotifications /> },
       { path: "teacher", element: <AllTeachers /> },
       { path: "groups", element: <AllGroups /> },
+      { path: "groupsdetails/:id", element: <Groupdetails /> },
+
       // Settings
       { path: "settings/profile", element: <Profile /> },
       { path: "settings/editpersonal", element: <EditProfile /> },

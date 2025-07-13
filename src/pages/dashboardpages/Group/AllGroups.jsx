@@ -18,6 +18,7 @@ import {
   TableCell,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 const currentGroupData = [
   {
@@ -231,9 +232,11 @@ function DataTable({ data }) {
                 <TableCell className="text-center">{item.email}</TableCell>
                 <TableCell className="text-center">{item.address}</TableCell>
                 <TableCell className="text-center">
-                  <Button className="bg-[#2C6E3E] text-white hover:bg-[#2C6E3E]/90">
-                    View Details
-                  </Button>
+                  <Link to={`/dashboard/groupsdetails/${item.id}`}>
+                    <Button className="bg-[#2C6E3E] text-white hover:bg-[#2C6E3E]/90">
+                      View Details
+                    </Button>
+                  </Link>
                 </TableCell>
               </TableRow>
             ))
