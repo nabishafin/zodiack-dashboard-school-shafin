@@ -17,6 +17,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import sidebarlogo from "../../assets/logo-two.png";
 
 // Sidebar Items
 const sidebarItems = [
@@ -65,13 +66,11 @@ const sidebarItems = [
 ];
 
 // Logo Section
-function LogoSection({ name = "Name", title = "Title" }) {
+function LogoSection() {
   return (
     <Link to="/dashboard">
       <div className="flex items-center p-6 flex-col justify-center">
-        <img src="/logo.svg" alt="logo" className="w-10 h-10" />
-        <h1 className="text-2xl font-bold">{name}</h1>
-        <p className="text-sm">{title}</p>
+        <img src={sidebarlogo} alt="logo" />
       </div>
     </Link>
   );
@@ -107,7 +106,7 @@ function SidebarNav({ onLinkClick }) {
                     className={cn(
                       "w-full justify-start gap-3 h-10",
                       isActive
-                        ? "bg-teal-50 text-[#017783] hover:bg-teal-100"
+                        ? "bg-[#2C6E3E] text-white"
                         : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                     )}
                   >
@@ -136,7 +135,7 @@ function SidebarNav({ onLinkClick }) {
                                 className={cn(
                                   "w-full justify-start gap-3 h-9 text-sm",
                                   isChildActive
-                                    ? "bg-white text-[#017783]"
+                                    ? "bg-[#2C6E3E] text-white"
                                     : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
                                 )}
                               >
@@ -157,7 +156,7 @@ function SidebarNav({ onLinkClick }) {
                     className={cn(
                       "w-full justify-start gap-3 h-10",
                       isActive
-                        ? "bg-white text-[#017783]"
+                        ? "bg-[#2C6E3E] text-white"
                         : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                     )}
                   >
@@ -204,7 +203,7 @@ function MobileSidebar() {
           {/* Mobile Logo */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
             <div className="flex items-center gap-2">
-              <div className="bg-teal-600 p-2 rounded-lg">
+              <div className="bg-[#2C6E3E] p-2 rounded-lg">
                 <Music className="h-6 w-6 text-white" />
               </div>
               <div>

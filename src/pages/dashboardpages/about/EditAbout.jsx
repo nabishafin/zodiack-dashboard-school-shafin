@@ -101,7 +101,7 @@ Lorem ipsum dolor sit amet consectetur. Fringilla a cras vitae orci. Egestas dui
   return (
     <div className=" bg-gray-100">
       {/* Header */}
-      <div className="bg-[#017783] text-white p-4 flex items-center gap-3">
+      <div className="bg-[#2C6E3E] text-white p-4 flex items-center gap-3">
         <ChevronLeft className="h-6 w-6" />
         <h1 className="text-lg font-medium">Edit about us</h1>
       </div>
@@ -224,7 +224,7 @@ Lorem ipsum dolor sit amet consectetur. Fringilla a cras vitae orci. Egestas dui
             <div className="p-4 border-t border-gray-200">
               <Button
                 onClick={handleSaveChanges}
-                className="bg-[#017783] hover:bg-[#015a63] text-white px-8 py-2 rounded-md"
+                className="bg-[#2C6E3E]  text-white px-8 py-2 rounded-md"
               >
                 Save Changes
               </Button>

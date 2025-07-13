@@ -20,7 +20,7 @@ export default function DashboardHeader() {
   };
 
   return (
-    <header className="bg-[#017783] text-white px-8 py-4 ">
+    <header className="bg-[#2C6E3E] text-white px-8 py-4 ">
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-center gap-4">
           {/* Mobile Sidebar Trigger */}

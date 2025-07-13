@@ -45,7 +45,7 @@ const EditProfile = () => {
   return (
     <div className="min-h-screen font-sans bg-gray-50">
       {/* Header */}
-      <div className="bg-[#017783] text-white p-4 text-xl font-semibold flex justify-between items-center rounded-md">
+      <div className="bg-[#2C6E3E] text-white p-4 text-xl font-semibold flex justify-between items-center rounded-md">
         <span>Edit Personal Information</span>
       </div>
 
@@ -152,7 +152,7 @@ const EditProfile = () => {
               </div>
               <Button
                 onClick={handleSaveChanges}
-                className="flex-1 bg-[#017783] hover:bg-[#015a63] text-white"
+                className="flex-1 bg-[#2C6E3E]  text-white"
               >
                 Save Changes
               </Button>

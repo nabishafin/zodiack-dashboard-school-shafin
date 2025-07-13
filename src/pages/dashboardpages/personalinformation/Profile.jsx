@@ -9,7 +9,7 @@ const Profile = () => {
   return (
     <div className="min-h-screen font-sans">
       {/* Header */}
-      <div className="bg-[#017783] hover:bg-[#017783] text-white p-4 text-xl font-semibold rounded-md">
+      <div className="bg-[#2C6E3E]  text-white p-4 text-xl font-semibold rounded-md">
         Personal Information
       </div>
 
@@ -18,7 +18,7 @@ const Profile = () => {
         {/* Edit Profile Button */}
         <div className="flex justify-end mb-8">
           <Link to="/dashboard/settings/editpersonal">
-            <Button className="bg-[#017783] hover:bg-[#017783] text-white px-6 py-2 rounded-full flex items-center space-x-2 shadow-md">
+            <Button className="bg-[#2C6E3E]  text-white px-6 py-2 rounded-full flex items-center space-x-2 shadow-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
