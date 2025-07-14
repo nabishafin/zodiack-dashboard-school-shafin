@@ -23,6 +23,7 @@ import AllNotifications from "../pages/dashboardpages/notification/AllNotificati
 import AllTeachers from "@/pages/dashboardpages/teacher/AllTeachers";
 import AllGroups from "@/pages/dashboardpages/Group/AllGroups";
 import Groupdetails from "@/pages/dashboardpages/Group/Groupdetails";
+import ChangedPassword from "@/pages/auth/ChangedPassword";
 
 const routes = createBrowserRouter([
   {
@@ -58,6 +59,7 @@ const routes = createBrowserRouter([
       // Settings
       { path: "settings/profile", element: <Profile /> },
       { path: "settings/editpersonal", element: <EditProfile /> },
+      { path: "settings/changepassword", element: <ChangedPassword /> },
       { path: "settings/terms", element: <TermsAndConditions /> },
       { path: "settings/editterms", element: <EditTermsAndConditions /> },
       { path: "settings/privacy", element: <PrivacyPolicy /> },

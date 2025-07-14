@@ -3,6 +3,7 @@ import { ArrowLeft, Eye, EyeOff, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 
 export default function ChangedPassword() {
   const [showOldPassword, setShowOldPassword] = useState(false);
@@ -29,7 +30,7 @@ export default function ChangedPassword() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className=" ">
       {/* Header */}
       <div className="bg-[#2C6E3E] text-white p-4">
         <div className="flex items-center gap-3">

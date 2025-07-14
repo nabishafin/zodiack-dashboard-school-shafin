@@ -11,6 +11,7 @@ import {
   ChevronDown,
   Menu,
   Music,
+  KeyRound,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -45,6 +46,11 @@ const sidebarItems = [
         title: "Profile",
         href: "/dashboard/settings/profile",
         icon: UserCog,
+      },
+      {
+        title: "Change Password",
+        href: "/dashboard/settings/changepassword",
+        icon: KeyRound,
       },
       {
         title: "Terms & Condition",
