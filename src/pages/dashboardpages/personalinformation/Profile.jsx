@@ -44,7 +44,7 @@ const Profile = () => {
               <AvatarFallback>IS</AvatarFallback>
             </Avatar>
             <p className="text-lg font-medium text-gray-800">Profile</p>
-            <p className="text-gray-600">Admin</p>
+            {/* <p className="text-gray-600">Admin</p> */}
           </div>
 
           {/* Information Fields */}
