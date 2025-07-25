@@ -6,11 +6,21 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // ✅ added
 
 const SignInPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate(); // ✅ added
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // form reload bondho korar jonno
+
+    // 👉 ekhane tumi chaile real authentication check korte paro
+
+    // success hole dashboard e pathai:
+    navigate("/dashboard"); // ✅ dashboard route
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 ">
@@ -29,42 +39,33 @@ const SignInPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                {" "}
+                {/* ✅ added */}
                 {/* Username/Email Field */}
                 <div className="space-y-2">
-                  <Label
-                    htmlFor="username"
-                    className="text-sm font-medium text-gray-700"
-                  >
-                    User name
-                  </Label>
+                  <Label htmlFor="username">User name</Label>
                   <Input
                     id="username"
                     type="text"
                     placeholder="Enter your username"
-                    className="h-11 border-gray-300 focus:border-red-900 focus:ring-red-900"
+                    className="h-11 border-gray-300"
                   />
                 </div>
-
                 {/* Password Field */}
                 <div className="space-y-2">
-                  <Label
-                    htmlFor="password"
-                    className="text-sm font-medium text-gray-700"
-                  >
-                    Password
-                  </Label>
+                  <Label htmlFor="password">Password</Label>
                   <div className="relative">
                     <Input
                       id="password"
                       type={showPassword ? "text" : "password"}
                       placeholder="Enter your password"
-                      className="h-11 pr-10 border-gray-300 focus:border-[#2C6E3E] focus:ring-[#2C6E3E]"
+                      className="h-11 pr-10 border-gray-300"
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2"
                     >
                       {showPassword ? (
                         <EyeOff className="h-4 w-4" />
@@ -74,22 +75,15 @@ const SignInPage = () => {
                     </button>
                   </div>
                 </div>
-
-                {/* Remember Me and Forgot Password */}
+                {/* Remember Me */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="remember"
                       checked={rememberMe}
                       onCheckedChange={setRememberMe}
-                      className="border-gray-300 data-[state=checked]:bg-[#2C6E3E] data-[state=checked]:border-[#2C6E3E]"
                     />
-                    <Label
-                      htmlFor="remember"
-                      className="text-sm font-medium text-gray-700 cursor-pointer"
-                    >
-                      Remember me
-                    </Label>
+                    <Label htmlFor="remember">Remember me</Label>
                   </div>
                   <Link to={"/forgotpass"}>
                     <button
@@ -100,11 +94,10 @@ const SignInPage = () => {
                     </button>
                   </Link>
                 </div>
-
                 {/* Sign In Button */}
                 <Button
                   type="submit"
-                  className="w-full h-11 bg-gradient-to-b from-[#2C6E3E] to-[#2C6E3E] hover:bg-red-800 text-white font-medium"
+                  className="w-full h-11 bg-[#2C6E3E] text-white font-medium"
                 >
                   Sign In
                 </Button>
